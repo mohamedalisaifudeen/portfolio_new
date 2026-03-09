@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohamed Ali Saifudeen — Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+<!-- Noise overlay -->
+<div class="noise-overlay"></div>
+
+<!-- Custom cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- ============================
+     NAVBAR
+============================= -->
+<nav id="navbar" class="navbar navbar-expand-md">
+  <div class="container">
+    <a class="nav-brand" href="#hero">MAS.dev</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <div class="d-flex flex-wrap gap-1 mt-3 mt-md-0">
+        <a class="nav-link-custom" href="#about">About</a>
+        <a class="nav-link-custom" href="#skills">Skills</a>
+        <a class="nav-link-custom" href="#projects">Projects</a>
+        <a class="nav-link-custom" href="#experience">Experience</a>
+        <a class="nav-link-custom" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================
+     HERO
+============================= -->
+<section id="hero">
+  <canvas id="three-canvas"></canvas>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">// Hello, World — Welcome to my portfolio</p>
+      <h1 class="hero-name">
+        Mohamed Ali<br>
+        <span class="highlight">Saifudeen</span>
+      </h1>
+      <p class="hero-title">Associate Software Engineer &nbsp;/&nbsp; Full-Stack Developer</p>
+      <p class="hero-desc">
+        Building production-grade enterprise systems and AI-powered applications. 
+        Passionate about clean architecture, high-traffic backends, and 
+        turning complex problems into elegant solutions.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary-red">Get in Touch</a>
+        <a href="#projects" class="btn-ghost-red">View Projects</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ============================
+     ABOUT
+============================= -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left: Text -->
+      <div class="reveal">
+        <p class="section-label">// 01. About</p>
+        <h2 class="section-title">Crafting Systems<br>That <span style="color:var(--red)">Scale</span></h2>
+        <div class="section-line"></div>
+        <p class="about-text">
+          I'm a <strong>software engineer</strong> currently working at <strong>Epic Lanka</strong>, 
+          contributing to large-scale enterprise systems serving millions of requests daily. 
+          I specialize in <strong>Java/Spring Boot backends</strong>, cloud-integrated IoT solutions, 
+          and AI-powered applications.
+        </p>
+        <p class="about-text mt-3">
+          Currently pursuing my degree at the <strong>University of Westminster (IIT)</strong>, 
+          I bridge academic depth with real-world production experience — from debugging live 
+          services handling <strong>1M+ daily requests</strong> to building RAG-based AI tools 
+          and full-stack web platforms.
+        </p>
+        <div class="strength-grid">
+          <div class="strength-item">
+            <i class="bi bi-server"></i>
+            <p>Enterprise Backend</p>
+          </div>
+          <div class="strength-item">
+            <i class="bi bi-cpu"></i>
+            <p>IoT & Embedded</p>
+          </div>
+          <div class="strength-item">
+            <i class="bi bi-robot"></i>
+            <p>AI / RAG Systems</p>
+          </div>
+          <div class="strength-item">
+            <i class="bi bi-layers"></i>
+            <p>Full-Stack Dev</p>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Stats -->
+      <div class="reveal" style="transition-delay:0.15s">
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="stat-block">
+              <div class="stat-num">12+</div>
+              <div class="stat-label">Projects Built</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="stat-block">
+              <div class="stat-num">1M+</div>
+              <div class="stat-label">Daily Requests Handled</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="stat-block">
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Enterprise Systems</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="stat-block">
+              <div class="stat-num">15+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ============================
+     SKILLS
+============================= -->
+<section id="skills">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">// 02. Skills</p>
+      <h2 class="section-title">Technical <span style="color:var(--red)">Arsenal</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Backend -->
+      <div class="col-md-6 reveal">
+        <div class="skill-category">
+          <div class="skill-cat-label"><i class="bi bi-terminal me-1"></i> Backend</div>
+          <div class="skill-tags">
+            <div class="skill-tag"><span>Java</span></div>
+            <div class="skill-tag"><span>Spring Boot</span></div>
+            <div class="skill-tag"><span>Java EE</span></div>
+            <div class="skill-tag"><span>Spring MVC</span></div>
+            <div class="skill-tag"><span>Spring Security</span></div>
+            <div class="skill-tag"><span>REST APIs</span></div>
+            <div class="skill-tag"><span>Flask</span></div>
+            <div class="skill-tag"><span>FastAPI</span></div>
+            <div class="skill-tag"><span>Python</span></div>
+            <div class="skill-tag"><span>Multithreading</span></div>
+          </div>
+        </div>
+        <div class="skill-category mt-4">
+          <div class="skill-cat-label"><i class="bi bi-database me-1"></i> Databases</div>
+          <div class="skill-tags">
+            <div class="skill-tag"><span>Oracle DB</span></div>
+            <div class="skill-tag"><span>MySQL</span></div>
+            <div class="skill-tag"><span>MongoDB</span></div>
+            <div class="skill-tag"><span>Redis</span></div>
+            <div class="skill-tag"><span>Firebase</span></div>
+            <div class="skill-tag"><span>ChromaDB</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Frontend & AI -->
+      <div class="col-md-6 reveal" style="transition-delay:0.15s">
+        <div class="skill-category">
+          <div class="skill-cat-label"><i class="bi bi-layout-text-sidebar me-1"></i> Frontend & Mobile</div>
+          <div class="skill-tags">
+            <div class="skill-tag"><span>Angular</span></div>
+            <div class="skill-tag"><span>React.js</span></div>
+            <div class="skill-tag"><span>Flutter / Dart</span></div>
+            <div class="skill-tag"><span>HTML5 / CSS3</span></div>
+            <div class="skill-tag"><span>Bootstrap</span></div>
+            <div class="skill-tag"><span>jQuery</span></div>
+            <div class="skill-tag"><span>AJAX</span></div>
+            <div class="skill-tag"><span>JSP</span></div>
+          </div>
+        </div>
+        <div class="skill-category mt-4">
+          <div class="skill-cat-label"><i class="bi bi-stars me-1"></i> AI / Cloud / Tools</div>
+          <div class="skill-tags">
+            <div class="skill-tag"><span>LangChain</span></div>
+            <div class="skill-tag"><span>Google Gemini</span></div>
+            <div class="skill-tag"><span>RAG</span></div>
+            <div class="skill-tag"><span>Scikit-Learn</span></div>
+            <div class="skill-tag"><span>AWS EC2</span></div>
+            <div class="skill-tag"><span>Arduino / IoT</span></div>
+            <div class="skill-tag"><span>OAuth</span></div>
+            <div class="skill-tag"><span>Git</span></div>
+            <div class="skill-tag"><span>Hugging Face</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ============================
+     PROJECTS
+============================= -->
+<section id="projects">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">// 03. Projects</p>
+      <h2 class="section-title">Selected <span style="color:var(--red)">Work</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- HelpDesk Pro — featured -->
+      <div class="col-12 reveal">
+        <div class="project-card" style="background: linear-gradient(135deg, rgba(232,34,58,0.05) 0%, var(--glass) 50%);">
+          <div class="row align-items-center g-4">
+            <div class="col-md-8">
+              <div class="project-num">Featured — 01</div>
+              <div class="project-title" style="font-size:1.45rem">HelpDesk Pro</div>
+              <p class="project-desc">
+                AI-powered customer support specialist that goes beyond chatbots — uses RAG to ground every answer in real ticket history. Semantic search understands "screen glitches" and "flickering display" as the same issue. Hybrid keyword + vector logic drastically reduces hallucinations.
+              </p>
+              <div class="project-stack">
+                <span class="tech-badge">RAG</span>
+                <span class="tech-badge">LangChain 0.3</span>
+                <span class="tech-badge">Gemini 2.5</span>
+                <span class="tech-badge">ChromaDB</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">React.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="proj-link"><i class="bi bi-github"></i> Source</a>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+              <div style="width:180px;height:180px;border:1px solid var(--border);background:rgba(232,34,58,0.04);display:flex;align-items:center;justify-content:center;">
+                <i class="bi bi-headset" style="font-size:4.5rem;color:var(--red);opacity:0.6;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SafeCrop -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="project-card">
+          <div class="project-num">02</div>
+          <div class="project-title">SafeCrop</div>
+          <p class="project-desc">IoT solution preventing elephant invasions of paddy fields. Voltage-drop trap wire triggers alarms and pushes notifications to farmers and wildlife officers via mobile app.</p>
+          <div class="project-stack">
+            <span class="tech-badge">IoT</span>
+            <span class="tech-badge">Arduino</span>
+            <span class="tech-badge">Flutter</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">AWS EC2</span>
+            <span class="tech-badge">Firebase</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mohamedalisaifudeen/safecrop" class="proj-link" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMDB RAG -->
+      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:0.1s">
+        <div class="project-card">
+          <div class="project-num">03</div>
+          <div class="project-title">IMDB RAG Sentiment Agent</div>
+          <p class="project-desc">RAG-powered LLM using Google Gemini for IMDB sentiment prediction. Reviews are graph vertices for semantic retrieval via ChromaDB + LangChain. Deployed on Hugging Face Spaces.</p>
+          <div class="project-stack">
+            <span class="tech-badge">Gemini</span>
+            <span class="tech-badge">LangChain</span>
+            <span class="tech-badge">ChromaDB</span>
+            <span class="tech-badge">FastAPI</span>
+            <span class="tech-badge">React.js</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link" target="_blank"><i class="bi bi-box-arrow-up-right"></i> HuggingFace</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SyncBook -->
+      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:0.2s">
+        <div class="project-card">
+          <div class="project-num">04</div>
+          <div class="project-title">SyncBook</div>
+          <p class="project-desc">Real-time ticket booking app with concurrent purchase management using multi-threading and synchronization. Spring Boot backend + Angular frontend for seamless UX.</p>
+          <div class="project-stack">
+            <span class="tech-badge">Spring Boot</span>
+            <span class="tech-badge">Angular</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Multithreading</span>
+            <span class="tech-badge">REST</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mohamedalisaifudeen/SyncBook" class="proj-link" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CanSure -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="project-card">
+          <div class="project-num">05</div>
+          <div class="project-title">CanSure — Breast Cancer Predictor</div>
+          <p class="project-desc">ML project using classification & regression (Logistic Regression, Decision Tree, Naive Bayes, Random Forest) to predict breast cancer. Evaluated with accuracy, F1, RMSE metrics.</p>
+          <div class="project-stack">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Scikit-Learn</span>
+            <span class="tech-badge">Random Forest</span>
+            <span class="tech-badge">Logistic Reg.</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edmonds-Karp -->
+      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:0.1s">
+        <div class="project-card">
+          <div class="project-num">06</div>
+          <div class="project-title">Max-Flow Edmonds-Karp</div>
+          <p class="project-desc">Ford-Fulkerson with BFS (Edmonds-Karp) implemented in Java — finds augmenting paths, updates residual capacities, and efficiently computes maximum flow in a network.</p>
+          <div class="project-stack">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">Graph Algorithms</span>
+            <span class="tech-badge">BFS</span>
+            <span class="tech-badge">Data Structures</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mohamedalisaifudeen/Edmonds" class="proj-link" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Smart Door Lock -->
+      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:0.2s">
+        <div class="project-card">
+          <div class="project-num">07</div>
+          <div class="project-title">Smart Keypad Door Lock</div>
+          <p class="project-desc">Arduino-powered secure door lock with Bluetooth mobile app integration. Includes relay module, solenoid lock, buck converter for stable power — planned fingerprint sensor upgrade.</p>
+          <div class="project-stack">
+            <span class="tech-badge">Arduino</span>
+            <span class="tech-badge">Flutter</span>
+            <span class="tech-badge">Bluetooth</span>
+            <span class="tech-badge">Circuit Design</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="proj-link"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keeper -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="project-card">
+          <div class="project-num">08</div>
+          <div class="project-title">Keeper</div>
+          <p class="project-desc">Google Keep replica built with the MERN stack. Features note creation, deletion, categorization using React component-based architecture for efficient UI rendering.</p>
+          <div class="project-stack">
+            <span class="tech-badge">React.js</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">Express</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mohamedalisaifudeen/keeper_new" class="proj-link" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FlashChat -->
+      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:0.1s">
+        <div class="project-card">
+          <div class="project-num">09</div>
+          <div class="project-title">FlashChat</div>
+          <p class="project-desc">Real-time Flutter group chat app with Cloud Firestore backend. Modern UI with support for group conversations and seamless real-time message synchronization.</p>
+          <div class="project-stack">
+            <span class="tech-badge">Flutter</span>
+            <span class="tech-badge">Dart</span>
+            <span class="tech-badge">Firebase</span>
+            <span class="tech-badge">Cloud Firestore</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mohamedalisaifudeen/FlashChat" class="proj-link" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Laptrix -->
+      <div class="col-md-6 col-lg-4 reveal" style="transition-delay:0.2s">
+        <div class="project-card">
+          <div class="project-num">10</div>
+          <div class="project-title">Laptrix</div>
+          <p class="project-desc">Web app helping remote workers discover coffee shops with essential amenities. Interactive map with Folium, CRUD operations for shop data, built with Flask + SQLAlchemy.</p>
+          <div class="project-stack">
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">SQLAlchemy</span>
+            <span class="tech-badge">Folium</span>
+            <span class="tech-badge">Bootstrap</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mohamedalisaifudeen/Laptrix" class="proj-link" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ============================
+     EXPERIENCE & EDUCATION
+============================= -->
+<section id="experience">
+  <div class="container">
+    <div class="row">
+      <!-- Experience -->
+      <div class="col-lg-7 reveal">
+        <p class="section-label">// 04. Experience</p>
+        <h2 class="section-title">Work <span style="color:var(--red)">History</span></h2>
+        <div class="section-line"></div>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Sep 2025 — Present</div>
+            <div class="timeline-title">Associate Software Engineer</div>
+            <div class="timeline-sub">Epic Lanka · Colombo, Sri Lanka</div>
+            <div class="timeline-body">
+              Working across multiple production-grade enterprise systems. 
+              Contributed to the <strong style="color:var(--text)">SLT WFMS</strong> — a workforce management system handling 
+              <strong style="color:var(--text)">1M+ daily requests</strong>. Performed live server debugging, Oracle DB query analysis, 
+              branch management, and deployment coordination.
+              <br><br>
+              Also contributed to the <strong style="color:var(--text)">Valuation Department System</strong> (property valuation & tax management) 
+              implementing backend changes under functional and regulatory requirements.
+              <br><br>
+              Working on <strong style="color:var(--text)">Epic Green ERP</strong> — developing Spring Boot services and Angular components 
+              integrated via REST APIs across multiple ERP modules.
+            </div>
+            <div class="timeline-skills">
+              <span class="tech-badge">Java</span>
+              <span class="tech-badge">Spring Boot</span>
+              <span class="tech-badge">Oracle DB</span>
+              <span class="tech-badge">Angular</span>
+              <span class="tech-badge">AWS</span>
+              <span class="tech-badge">Redis</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="col-lg-5 reveal" style="transition-delay:0.2s">
+        <p class="section-label">// 05. Education</p>
+        <h2 class="section-title">Academic <span style="color:var(--red)">Path</span></h2>
+        <div class="section-line"></div>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 — Present</div>
+            <div class="timeline-title">BSc (Hons) Computer Science</div>
+            <div class="timeline-sub">University of Westminster · via IIT Sri Lanka</div>
+            <div class="timeline-body">
+              Studying software engineering, algorithms, data structures, AI/ML, and distributed systems. 
+              Multiple award-level academic projects including IoT, RAG LLMs, and algorithm implementation.
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022 — 2023</div>
+            <div class="timeline-title">Diploma in IT / Software Engineering</div>
+            <div class="timeline-sub">ESOFT Metro Campus · Sri Lanka</div>
+            <div class="timeline-body">
+              Foundation in programming, web development, and software design. 
+              Built initial projects: Pong Game, Snake Game, FlashChat, Laptrix.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ============================
+     CONTACT
+============================= -->
+<section id="contact">
+  <div class="container">
+    <div class="text-center reveal">
+      <p class="section-label">// 06. Contact</p>
+      <h2 class="section-title">Let's <span style="color:var(--red)">Connect</span></h2>
+      <p style="color:var(--muted);font-size:0.97rem;max-width:480px;margin:1rem auto 3rem;line-height:1.75;">
+        Open to full-time roles, freelance projects, and interesting collaborations. 
+        Feel free to reach out.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4 col-sm-6 reveal">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+          <div class="contact-label">Email</div>
+          <!-- REPLACE: your email below -->
+          <a href="mailto:muhammedalisaifudeen1@yahoo.com" class="contact-value">muhammedalisaifudeen1<br>@yahoo.com</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 reveal" style="transition-delay:0.1s">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="bi bi-linkedin"></i></div>
+          <div class="contact-label">LinkedIn</div>
+          <!-- REPLACE: your LinkedIn URL below -->
+          <a href="https://linkedin.com/in/mohamedalisaifudeen" class="contact-value" target="_blank">linkedin.com/in/<br>mohamedalisaifudeen</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 reveal" style="transition-delay:0.2s">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="bi bi-github"></i></div>
+          <div class="contact-label">GitHub</div>
+          <!-- REPLACE: your GitHub URL below -->
+          <a href="https://github.com/mohamedalisaifudeen" class="contact-value" target="_blank">github.com/<br>mohamedalisaifudeen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FOOTER
+============================= -->
+<footer>
+  <div class="container">
+    <p>Designed & built by <span>Mohamed Ali Saifudeen</span> &nbsp;·&nbsp; <span>2025</span></p>
+  </div>
+</footer>
+
+<!-- ============================
+     SCRIPTS
+============================= -->
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="./index.js"></script>
+
+</body>
+</html>
